@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes id="odsl-camel-kafka" xmlns="http://camel.apache.org/schema/spring">
+
+    <route id="handle-messages">
+        <from uri="azureServiceBus:prod/company/tutorial" />
+        <log message="${body}" />
+        <to uri="kafka:ecb_fx" />
+    </route>
+
+</routes>

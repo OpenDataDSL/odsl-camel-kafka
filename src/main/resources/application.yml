@@ -1,0 +1,15 @@
+logging:
+  level:
+    org.springframework: INFO
+    com.opendatadsl: DEBUG
+
+azure:
+  connection: Endpoint=sb://sb-odsl.servicebus.windows.net/;
+  
+kafka:
+  connection: localhost:29092
+
+camel:
+  springboot:
+    xml-routes: classpath:camel/*.xml
+
